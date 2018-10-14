@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77895a5c01fd9d64aaeb0c7963326a82
+guid: a63b8a30c1758824fa12e6ee53855fe7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,6 +9,8 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
+    4300002: WideCorner
+    4300004: Wide90Bend
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
@@ -57,10 +59,10 @@ ModelImporter:
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVAngleDistortion: 1
+    secondaryUVAreaDistortion: 1
+    secondaryUVHardAngle: 60
+    secondaryUVPackMargin: 16
     useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 1
