@@ -1,4 +1,5 @@
 # Lesson Plan
+## Unity Editor UI, Scene Creation and Project Hierarchy
 * High level overview of main windows
 * Toolbar & Scene View / Game View
   * Hand Middle Mouse
