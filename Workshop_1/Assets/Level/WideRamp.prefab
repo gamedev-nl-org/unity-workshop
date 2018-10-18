@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4600964094471282}
   - component: {fileID: 33717538614474530}
   - component: {fileID: 23271461285240476}
-  - component: {fileID: 95604244922507004}
   - component: {fileID: 64494301928944998}
   m_Layer: 0
   m_Name: WideRamp
@@ -36,9 +35,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823788118370614}
-  m_LocalRotation: {x: 6.4262822e-12, y: 1, z: -0.0000018318508, w: 0.0000035952676}
-  m_LocalPosition: {x: -0.43699455, y: -18.581863, z: 1.0145357}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.0000012953096, y: -0.70710933, z: 0.0000012953185, w: 0.7071042}
+  m_LocalPosition: {x: -11, y: -0.000099961, z: 5}
+  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +57,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 692b9fe506855514294680e5a92ad5e3, type: 3}
+  - {fileID: 2100000, guid: 9f0380f834fdea14683427f080f848ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,21 +98,3 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 692b9fe506855514294680e5a92ad5e3, type: 3}
---- !u!95 &95604244922507004
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1823788118370614}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 692b9fe506855514294680e5a92ad5e3, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

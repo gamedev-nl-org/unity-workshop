@@ -1773,14 +1773,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4600964094471282, guid: 3d67470fd6fc8124fabb20e855da0fa9, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.99999976
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600964094471282, guid: 3d67470fd6fc8124fabb20e855da0fa9, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.99999976
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d67470fd6fc8124fabb20e855da0fa9, type: 2}
   m_IsPrefabAsset: 0
@@ -2078,14 +2070,6 @@ Prefab:
     - target: {fileID: 4643546192830838, guid: a25023c029bfd1b478219aeffb03a439, type: 2}
       propertyPath: m_RootOrder
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4643546192830838, guid: a25023c029bfd1b478219aeffb03a439, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4643546192830838, guid: a25023c029bfd1b478219aeffb03a439, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a25023c029bfd1b478219aeffb03a439, type: 2}

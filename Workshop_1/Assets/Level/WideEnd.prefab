@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4885504776036948}
   - component: {fileID: 33450865501126956}
   - component: {fileID: 23719725619280204}
-  - component: {fileID: 95611596762498630}
   - component: {fileID: 65976530401591118}
   - component: {fileID: 65114628097708350}
   - component: {fileID: 65574063123066288}
@@ -39,8 +38,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1651891848690882}
-  m_LocalRotation: {x: 6.4262822e-12, y: 1, z: -0.0000018318508, w: 0.0000035952676}
-  m_LocalPosition: {x: 5.072, y: -4.029, z: -0.428}
+  m_LocalRotation: {x: -0.00000011920929, y: 0.707107, z: 0.00000017881393, w: -0.7071066}
+  m_LocalPosition: {x: 1, y: -0.00004696846, z: 5.0000095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6383e65d11c6eb649a39e447f973141c, type: 3}
+  - {fileID: 2100000, guid: 9f0380f834fdea14683427f080f848ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,21 +135,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.000021, y: 0.037402015, z: 2.0000181}
   m_Center: {x: 0.0000034570694, y: -0.018711975, z: -0.0000019073486}
---- !u!95 &95611596762498630
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1651891848690882}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6383e65d11c6eb649a39e447f973141c, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
