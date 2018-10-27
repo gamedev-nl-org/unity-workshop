@@ -2126,6 +2126,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4600964094471282, guid: 3d67470fd6fc8124fabb20e855da0fa9,
     type: 2}
   m_PrefabInternal: {fileID: 1115699539}
+--- !u!1 &1176180649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1964709286369538, guid: 6f15e797329851b4ba41165b45a6968f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1528012524}
+--- !u!1 &1209986876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209986879}
+  - component: {fileID: 1209986878}
+  - component: {fileID: 1209986877}
+  m_Layer: 0
+  m_Name: TurnGreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1209986877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209986876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90df0f7dc1df904ca4cd70b8bb3d811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterColor: {r: 0, g: 1, b: 0, a: 1}
+  exitColor: {r: 1, g: 0, b: 0, a: 1}
+  coloredWalls: {fileID: 1176180649}
+--- !u!65 &1209986878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209986876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.011804, y: 1, z: 2.0072098}
+  m_Center: {x: 0.045169592, y: 0, z: -0.5176554}
+--- !u!4 &1209986879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209986876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0.503, z: 5.541}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1271030220
 Prefab:
   m_ObjectHideFlags: 0
@@ -2455,6 +2516,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 23616120941217794, guid: 6f15e797329851b4ba41165b45a6968f,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd9b895e123438842a83ad4f280ae6b9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f15e797329851b4ba41165b45a6968f, type: 2}
   m_IsPrefabAsset: 0
