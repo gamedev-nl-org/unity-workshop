@@ -11,28 +11,10 @@ public class PlayerController : MonoBehaviour {
     float rotateSpeed = 4.0f;
 	
 	void Update () {
-        Vector3 movement = Vector3.zero;
-        if (Input.GetKey(KeyCode.W))
-        {
-            movement += transform.forward;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            movement -= transform.forward;
-        }
-
+        Vector3 movement = transform.forward * Input.GetAxis("Vertical");
         GetComponent<CharacterController>().SimpleMove(movement * Time.deltaTime * movementSpeed);
 
-        Vector3 orientation = Vector3.zero;
-        if (Input.GetKey(KeyCode.A))
-        {
-            orientation -= transform.right;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            orientation += transform.right;
-        }
-
+        Vector3 orientation = transform.right * Input.GetAxis("Horizontal");
         transform.forward = Vector3.Lerp(transform.forward, orientation.normalized, rotateSpeed * Time.deltaTime);
     }
 }

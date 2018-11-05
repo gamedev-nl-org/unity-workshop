@@ -1,4 +1,16 @@
-# WorkShop 4: Prefabs, ScriptableObjects, GameObject Lifecycle, Debugging, more serialzied field types
+# WorkShop 3: Character Controller & Input
+* GetAxis("")
+* XBox One Pad
+  * Sensitivity/Gravity
+  * Dead
+  * Joy Num
+* Limitations of the native input manager (build project, remapping in game)
+* Touch Controls
+  * Input.touchCount
+  * Input.touches
+
+
+# WorkShop 3: Prefabs, ScriptableObjects, GameObject Lifecycle, Debugging, more serialzied field types
 
 
 Saving Game State
