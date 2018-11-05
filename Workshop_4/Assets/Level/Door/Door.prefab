@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800354099631946}
+  - component: {fileID: 65949919182619474}
+  - component: {fileID: 114606203817295660}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -36,7 +38,6 @@ GameObject:
   - component: {fileID: 4236057019063682}
   - component: {fileID: 33865607190544710}
   - component: {fileID: 23511878228983184}
-  - component: {fileID: 65255481335306118}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -50,13 +51,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789520306041472}
-  m_LocalRotation: {x: -0, y: -0.00000032782555, z: -0, w: 1}
-  m_LocalPosition: {x: 0.95000577, y: 0.000003980793, z: 0.29999667}
+  m_LocalRotation: {x: 6.4233063e-12, y: 1, z: -0.0000018318513, w: -0.0000036358833}
+  m_LocalPosition: {x: 1.0499979, y: 0.0000061591763, z: -0.29999572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4800354099631946}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!4 &4800354099631946
 Transform:
   m_ObjectHideFlags: 1
@@ -113,15 +114,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789520306041472}
   m_Mesh: {fileID: 4300002, guid: f9ed2e644f151604c884e77ec9315efa, type: 3}
---- !u!65 &65255481335306118
+--- !u!65 &65949919182619474
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1789520306041472}
+  m_GameObject: {fileID: 1308097457819982}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.100006506, y: 0.80000603, z: 0.60000896}
-  m_Center: {x: 0.04999306, y: 0.40000302, z: -0.2999962}
+  m_Size: {x: 1.0646533, y: 1.0000216, z: 2.0000181}
+  m_Center: {x: 0.4676842, y: 0.49999994, z: 0.0000017881393}
+--- !u!114 &114606203817295660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308097457819982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1af4619f7958b3459ea9e069c73dcdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1789520306041472}
+  isDoorOpened: 0
