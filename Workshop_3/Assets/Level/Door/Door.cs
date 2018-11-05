@@ -7,41 +7,34 @@ public class Door : MonoBehaviour {
     [SerializeField]
     private GameObject door;
 
-    [SerializeField]
-    bool isDoorOpened = false;
-
     bool enteredArea = false;
 
     float currentRotation;
 
-    float startingRotation;
-
     private void OnTriggerEnter(Collider other)
     {
         enteredArea = true;
+        door.GetComponent<Collider>().enabled = false;
     }
 
     private void Start()
     {
-        startingRotation = door.transform.eulerAngles.y;
+        currentRotation = door.transform.localEulerAngles.y;
     }
 
     // Update is called once per frame
     void Update () {
 		if(enteredArea)
         {
-            GetComponent<BoxCollider>().enabled = false;
-
-            if(currentRotation < 180)
+            if(currentRotation < 359)
             {
-                currentRotation = startingRotation + 100.0 * Time.deltaTime;
-                if(currentRotation > 180)
+                currentRotation = currentRotation + 100.0f * Time.deltaTime;
+                if(currentRotation > 359)
                 {
-                    currentRotation = 180;
+                    currentRotation = 359;
                 }
-                door.transform.eulerAngles = new Vector3(door.transform.eulerAngles.x, doorRotation, door.transform.eulerAngles.z);
+                door.transform.localEulerAngles = new Vector3(door.transform.localEulerAngles.x, currentRotation, door.transform.localEulerAngles.z);
             }
-
         }
 	}
 }
