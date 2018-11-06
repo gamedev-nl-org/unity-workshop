@@ -9,9 +9,20 @@
   * Input.touchCount
   * Input.touches
 
+* Absolute Positioning
+  * Logging
+    * Collapse
+    * Stack Traces
+    * File Location
+      * macOS	~/Library/Logs/Unity/Editor.log
+      * Windows	C:\Users\username\AppData\Local\Unity\Editor\Editor.log
+    * tailing the log `tail -f`
 
-# WorkShop 3: Prefabs, ScriptableObjects, GameObject Lifecycle, Debugging, more serialzied field types
+ * Mouse Input
+  * Debug.DrawLine & Debug.DrawRay
+  
 
+# WorkShop 5 or later: Prefabs, ScriptableObjects, GameObject Lifecycle, Debugging, more serialzied field types
 
 Saving Game State
 Loading Scenes

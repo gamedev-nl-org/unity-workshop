@@ -9,12 +9,42 @@ public class PlayerController : MonoBehaviour {
 
     [SerializeField]
     float rotateSpeed = 4.0f;
-	
-	void Update () {
-        Vector3 movement = transform.forward * Input.GetAxis("Vertical");
-        GetComponent<CharacterController>().SimpleMove(movement * Time.deltaTime * movementSpeed);
 
-        Vector3 orientation = transform.right * Input.GetAxis("Horizontal");
-        transform.forward = Vector3.Lerp(transform.forward, orientation.normalized, rotateSpeed * Time.deltaTime);
+    [SerializeField]
+    CharacterController characterController;
+
+    [SerializeField]
+    Camera mainCamera;
+
+    Vector3 lastIntersectionPoint;
+
+    private void Start()
+    {
+        lastIntersectionPoint = transform.position + transform.forward;
+    }
+
+    void Update () {
+        transform.position = new Vector3(Input.GetAxis("Horizontal"), transform.position.y, Input.GetAxis("Vertical"));
+
+        Vector3 mousePosition = Input.mousePosition;
+        Ray ray = mainCamera.ScreenPointToRay(mousePosition);
+        Plane plane = new Plane(transform.up, transform.position);
+        RaycastHit hit;
+        bool didIntersectPlane = Physics.Raycast(ray, out hit);//plane.Raycast(ray, out intersectionDistance);
+        if (didIntersectPlane)
+        {
+            Vector3 intersectionPoint = hit.point;
+            Debug.DrawLine(intersectionPoint + Vector3.back, intersectionPoint + Vector3.forward, Color.cyan);
+            Debug.DrawLine(intersectionPoint + Vector3.left, intersectionPoint + Vector3.right, Color.cyan);
+            Debug.DrawLine(ray.origin, intersectionPoint, Color.green);
+
+            intersectionPoint = Vector3.Lerp(lastIntersectionPoint, intersectionPoint, Time.deltaTime);
+            transform.LookAt(intersectionPoint);
+            lastIntersectionPoint = intersectionPoint;
+        }
+        else
+        {
+            Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        }
     }
 }
