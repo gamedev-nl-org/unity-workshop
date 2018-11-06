@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour {
 
         Vector3 mousePosition = Input.mousePosition;
         Ray ray = mainCamera.ScreenPointToRay(mousePosition);
-        Plane plane = new Plane(transform.up, transform.position);
         RaycastHit hit;
         bool didIntersectPlane = Physics.Raycast(ray, out hit);//plane.Raycast(ray, out intersectionDistance);
         if (didIntersectPlane)
@@ -40,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 
             intersectionPoint = Vector3.Lerp(lastIntersectionPoint, intersectionPoint, Time.deltaTime);
             transform.LookAt(intersectionPoint);
+            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, transform.localEulerAngles.z);
             lastIntersectionPoint = intersectionPoint;
         }
         else
