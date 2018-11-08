@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
         Vector3 mousePosition = Input.mousePosition;
         Ray ray = mainCamera.ScreenPointToRay(mousePosition);
         RaycastHit hit;
-        bool didIntersectPlane = Physics.Raycast(ray, out hit);//plane.Raycast(ray, out intersectionDistance);
+        bool didIntersectPlane = Physics.Raycast(ray, out hit);
         if (didIntersectPlane)
         {
             Vector3 intersectionPoint = hit.point;

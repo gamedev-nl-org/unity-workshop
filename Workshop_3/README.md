@@ -4,7 +4,8 @@
   * Sensitivity/Gravity
   * Dead
   * Joy Num
-* Limitations of the native input manager (build project, remapping in game)
+* Limitations of the native input manager (build project, remapping in game) these limitations are patched in a development version https://forum.unity.com/threads/input-system-update.508660/page-2#post-3329735
+  * Building Standalone Games
 * Touch Controls
   * Input.touchCount
   * Input.touches
@@ -20,17 +21,15 @@
 
  * Mouse Input
   * Debug.DrawLine & Debug.DrawRay
-  
+  * More on vector math https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra
+
 
 # WorkShop 5 or later: Prefabs, ScriptableObjects, GameObject Lifecycle, Debugging, more serialzied field types
 
 Saving Game State
 Loading Scenes
 
-
-Building Standalone Games
 Asset store
-
 Advanced:
 Profiling
 
