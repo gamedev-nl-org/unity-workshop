@@ -1,2 +1,2 @@
-# WorkShop 2: 2D Physics
+# Workshop 2: 2D Physics
 * [Livestream](https://www.facebook.com/gamedevnl/videos/2195560407358559/?__xts__[0]=68.ARCkfZ7NWAy4MWRQR7icovY0YL98hUpkyIWcIFCqKdtP7TM8m3Q7b22PWbB6f_OYCXb8hpZWHuncO8T_Xx_SEpdePlyQUFHdyI9MIh75F2i5hGvO9FTX4j6eAQhVybXa0WxCuRnx8o_Ly0ZoONLm9bAZ4EQoFLEm4uKOifpFt_shtiNJ8jOiWjf9p5yBlvxTWDE3mYddeSE0foE-tLwhTyW9rdPrSQqS4KRiBg0&__tn__=-R)
