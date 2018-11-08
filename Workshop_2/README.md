@@ -1,27 +1,4 @@
-# WorkShop 1: Unity Editor UI, Scene Creation and Project Hierarchy
-![](CubeQuest.gif)
-## Livestream
-[Livestream](https://www.facebook.com/gamedevnl/videos/764420013898522/?__xts__[0]=68.ARDIcp_pvSkntFeFHGddsKz-ZfH8dAmkTE5_97gFK2Bq19_mmJy7uC_V2_IxO_GuQiAqQeGvajRbHAkjXIHXDjVETYV274ZEv7HJU9wInok9psp_C01pLWEAHiqn-_46wm1cEUfWrsra0jc3--mAZkapArXQPDTXSesH5xVBFx79lvIfPlCqfwrYJsXOBQgLDTC7FyRB27TfT9Lgm2SY7QKwWX0YD21mmYCqyHkh9O0&__tn__=-R)
+# WorkShop 2: 2D Physics
 
-## Lesson Plan
-* High level overview of main windows
-* Toolbar & Scene View / Game View
-  * Hand Middle Mouse
-  * Switch Gizmos (WER)
-* Center/Pivot
-* Local/Global
-* Play/Pause/Stop
-* Layouts and Managing Windows
-* Console
-* Project Window
-  * Explorer
-  * Meta Files
-* Inspector View
-  * Transforms
-  * Active/Inactive
-  * Components (Data Types)
-  * Live Editing
-* Snap Settings
-  * Vertex Snap
-* Duplicate (Ctrl+D)
-* Intro to scripting
+## Livestream
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fgamedevnl%2Fvideos%2F2195560407358559%2F&show_text=0&width=560" width="560" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
