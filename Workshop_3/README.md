@@ -3,6 +3,10 @@
 The assets used in this workshop are from [here](https://kenney.nl/assets/topdown-shooter). They're covered under the [creative commons license](https://creativecommons.org/publicdomain/zero/1.0/). Meaning you can use them in your personal or commercial projects royalty free. If you enjoy this tutorial please consider [donating](https://kenney.itch.io/kenney-donation) to the artists.
 
 # Overview
+* Slicing Sprites
+* 2D Pixel Perfect Package (2018.2 and up)
+
+
 * GetAxis("")
 * XBox One Pad
   * Sensitivity/Gravity
