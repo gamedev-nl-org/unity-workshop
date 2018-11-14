@@ -1,46 +1,82 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    Vector2 TargetVelocity = Vector2.zero;
-    RaycastHit2D[] results = new RaycastHit2D[16];
+    Vector3 inputVector = Vector3.zero;
+    RaycastHit2D[] directHits = new RaycastHit2D[1];
+    RaycastHit2D[] tangentHits = new RaycastHit2D[1];
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        TargetVelocity.x = Input.GetAxis("Horizontal");
-        TargetVelocity.y = Input.GetAxis("Vertical");
+    [SerializeField]
+    float playerSpeed = 6.0f;
 
-        Vector3 LookAtTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        LookAtTarget.z = 0;
+    [SerializeField]
+    ContactFilter2D obstructionsToPlayer = new ContactFilter2D();
 
-        //We might normally use the code below in a 3D game but...
-        //transform.LookAt(LookAtTarget); makes z face the target, therefore doesn't work in 2D
+    [SerializeField]
+    float wallBounceDistance = 0.001f;
 
-        Vector2 LookAtVector = LookAtTarget - transform.position;
-        if (LookAtVector.magnitude > GetComponent<CapsuleCollider2D>().size.x)
+    void Update() {
+        inputVector.x = Input.GetAxis("Horizontal");
+        inputVector.y = Input.GetAxis("Vertical");
+
+        Vector3 lookAtTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        lookAtTarget.z = 0;
+
+        // don't bother reorienting if we're right on top of our character
+        Vector2 lookAtVector = lookAtTarget - transform.position;
+        if (lookAtVector.magnitude > GetComponent<CapsuleCollider2D>().size.x)
         {
-            transform.right = LookAtTarget - transform.position;
+            // We might normally use the code below in a 3D game but...
+            // transform.LookAt(LookAtTarget); makes z face the target, therefore doesn't work in 2D
+            transform.right = lookAtTarget - transform.position;
         }
-    }
 
-    private void FixedUpdate()
-    {
-        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
-        
-        rigid.velocity = TargetVelocity * 3.0f;
-        rigid.angularVelocity = 0;
-        //rigid.Cast(rigid.velocity, results);
-        //if(results.Length > 0)
-        //{
-        //    rigid.velocity = Vector2.zero;
-        //}
+        Vector3 moveVector = inputVector * playerSpeed * Time.deltaTime;
+        int directHitCount = GetComponent<CapsuleCollider2D>().Cast(inputVector, directHits);
 
+        if (directHitCount > 0)
+        {
+            RaycastHit2D directHit = directHits[0];
+
+            if (moveVector.magnitude >= directHit.distance)
+            {
+                float diameter = GetComponent<CapsuleCollider2D>().size.x;
+                float radius = diameter / 2.0f;
+                Vector2 positionAtWall = directHit.point + directHit.normal * radius;
+                   
+                float wallBounceDistance = 0.001f;
+                positionAtWall += (directHit.normal * wallBounceDistance);
+
+                Vector2 previousPosition = transform.position;
+                float distanceSoFar = (positionAtWall - previousPosition).magnitude;
+
+                DebugUtil.DrawCircle(transform.position + moveVector, radius, Color.red);
+
+                Vector2 wallTangent = Vector3.Cross(Vector3.forward, directHit.normal);
+                float remainingDistance = moveVector.magnitude - distanceSoFar;
+
+                float dotForSign = Vector3.Dot(wallTangent, moveVector);
+                Vector2 directionalWallTangent = (wallTangent * dotForSign).normalized;
+                Vector2 finalTangentOffset = directionalWallTangent * remainingDistance;
+
+                int tangentHitCount = Physics2D.CapsuleCast(positionAtWall, GetComponent<CapsuleCollider2D>().size, CapsuleDirection2D.Horizontal, 0, directionalWallTangent, obstructionsToPlayer, tangentHits);
+                if(tangentHitCount > 0)
+                {
+                    RaycastHit2D tangentHit = tangentHits[0];
+                    if(remainingDistance >= tangentHit.distance)
+                    {
+                        DebugUtil.DrawCircle(positionAtWall + finalTangentOffset, radius, Color.magenta);
+                        transform.position = tangentHit.point + tangentHit.normal * radius;
+                        return;
+                    }
+                }
+
+                Debug.DrawLine(positionAtWall, positionAtWall + directionalWallTangent);
+                transform.position = positionAtWall + finalTangentOffset;
+                return;
+            }
+        }
+
+        transform.position += moveVector;
     }
 }

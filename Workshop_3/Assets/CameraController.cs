@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
     [SerializeField]
-    GameObject CameraTarget;
+    GameObject cameraTarget;
 
 	// Use this for initialization
 	void Start () {
@@ -19,8 +19,8 @@ public class CameraController : MonoBehaviour {
 
     private void LateUpdate()
     {
-        Vector3 TargetPos = CameraTarget.transform.position;
-        TargetPos.z = transform.position.z;
-        transform.position = TargetPos;
+        Vector3 targetPos = cameraTarget.transform.position;
+        targetPos.z = transform.position.z;
+        transform.position = targetPos;
     }
 }

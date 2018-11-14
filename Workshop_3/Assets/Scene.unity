@@ -9698,7 +9698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bc77e145ea3e64f93631b89c5665a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraTarget: {fileID: 1680507121}
+  cameraTarget: {fileID: 1680507121}
 --- !u!1 &527133208
 GameObject:
   m_ObjectHideFlags: 0
@@ -10387,7 +10387,7 @@ GameObject:
   - component: {fileID: 561817155}
   - component: {fileID: 561817157}
   - component: {fileID: 561817156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OuterWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18235,7 +18235,7 @@ GameObject:
   - component: {fileID: 984011322}
   - component: {fileID: 984011324}
   - component: {fileID: 984011323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KitchenCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30345,7 +30345,7 @@ GameObject:
   - component: {fileID: 1680507124}
   - component: {fileID: 1680507126}
   - component: {fileID: 1680507125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30405,7 +30405,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1680507121}
   m_LocalRotation: {x: -0, y: -0, z: -0.28509298, w: 0.95849985}
-  m_LocalPosition: {x: -0.73, y: 0.46, z: 0}
+  m_LocalPosition: {x: -4.76, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30422,6 +30422,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793e5b287c2b0534192d0d7b34f1b365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 6
+  obstructionsToPlayer:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 512
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  wallBounceDistance: 0.001
 --- !u!70 &1680507125
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -30435,7 +30451,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.84375, y: 0.671875}
+  m_Size: {x: 0.9, y: 0.9}
   m_Direction: 0
 --- !u!50 &1680507126
 Rigidbody2D:
@@ -30444,12 +30460,12 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1680507121}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 0.25
+  m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -37301,7 +37317,7 @@ GameObject:
   - component: {fileID: 2035346977}
   - component: {fileID: 2035346979}
   - component: {fileID: 2035346978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HouseWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
