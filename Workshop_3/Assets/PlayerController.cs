@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+    // To use this enable and set Rigidbody 2D to Kinematic
 
     Vector3 inputVector = Vector3.zero;
     RaycastHit2D[] directHits = new RaycastHit2D[1];

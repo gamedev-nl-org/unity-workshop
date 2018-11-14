@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PhysicsController : MonoBehaviour {
+    // To use this enable and set Rigidbody 2D to Dynamic
+
     Vector3 inputVector = Vector3.zero;
 
     [SerializeField]
