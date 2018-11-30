@@ -1,4 +1,4 @@
-# Workshop 4: Input (Mouse, Keyboard, and Controllers)
+# Workshop 4: User Interfaces
 
 The assets used in this workshop are based on the same files as [Workshop 3](https://github.com/gamedev-nl-org/unity-workshop/tree/master/Workshop_3)
 
